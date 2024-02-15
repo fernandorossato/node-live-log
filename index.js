@@ -17,22 +17,22 @@ module.exports = (root) => {
   module.root = root
 
   module.info = (msg, ...args) => {
-    const msgLog = moment().format(dateFomat) + ` [${module.root}] [info] - ${msg} ` + args.join(',')
+    const msgLog = moment().format(dateFomat) + ` [${module.root}] [info] - ${msg} ` + args.join(', ')
     io.emit('log-info', msgLog)
   }
 
   module.warn = (msg, ...args) => {
-    const msgLog = moment().format(dateFomat) + ` [${module.root}] [warn] - ${msg} ` + args.join(',')
+    const msgLog = moment().format(dateFomat) + ` [${module.root}] [warn] - ${msg} ` + args.join(', ')
     io.emit('log-warn', msgLog)
   }
 
   module.error = (msg, ...args) => {
-    const msgLog = moment().format(dateFomat) + ` [${module.root}] [error] - ${msg} ` + args.join(',')
+    const msgLog = moment().format(dateFomat) + ` [${module.root}] [error] - ${msg} ` + args.join(', ')
     io.emit('log-error', msgLog)
   }
 
   module.debug = (msg, ...args) => {
-    const msgLog = moment().format(dateFomat) + ` [${module.root}] [debug] - ${msg} ` + args.join(',')
+    const msgLog = moment().format(dateFomat) + ` [${module.root}] [debug] - ${msg} ` + args.join(', ')
     io.emit('log-debug', msgLog)
   }
 
