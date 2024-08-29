@@ -52,5 +52,6 @@ You can consult a more advanced example at this link [advanced client](exemple/c
 ```dosini
 LOG_PORT=3010 # Port that the log server will open for client connections, by default its is 3010
 LOG_HOST='127.0.0.1' # Host address where the server will run, by default it is localhost.
-LOG_DATE_FORMAT='DD-MM-YYYY HH:mm:ss.SSS' # Date format that the log will display, by default it is 'DD-MM-YYYY HH:mm:ss.SSS'
+LOG_DATE_FORMAT='DD-MM-YYYY HH:mm:ss.SSS' # Date format that the log will display, by default it is 'dd-MM-YYYY HH:mm:ss.SSS'
+LOG_LEVEL='error' # log level that the console should display, default is error.
 ```
