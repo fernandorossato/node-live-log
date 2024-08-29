@@ -15,8 +15,7 @@ const consoleLevel = process.env.LOG_LEVEL ? logMethods.get(process.env.LOG_LEVE
 
 const httpServer = require("http").createServer()
 const io = require("socket.io")(httpServer)
-const { log } = require('console')
-const { format } = require('date-fns')
+const moment = require('moment')
 
 httpServer.listen(port, host)
 console.log(`Node live log running at port ${port} on ${host} at console level ${Array.from(logMethods.keys())[consoleLevel]}`)
@@ -39,7 +38,7 @@ function logFormatter(msg, type, modulo, ...args) {
       }
   }
   const logType = type ? `- [${type.toUpperCase()}]` : '-'
-  return `[${format(new Date(),dateFomat)}] - [${modulo}] ${logType} ${msg}`
+  return `[${moment().format(dateFomat)}] - [${modulo}] ${logType} ${msg}`
 }
 
 module.exports = (root) => {
