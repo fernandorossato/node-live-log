@@ -8,7 +8,7 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "node-live-log": "../index",
+    "node-live-log": "../../node-live-log",
     "socket.io-client": "2.5.0"
   },
   "keywords": [],

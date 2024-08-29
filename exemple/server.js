@@ -1,15 +1,17 @@
 // Server exemple
-console.log("Entering loop");
+const log = require('node-live-log')('module-start')
+log.info('Server running')
 
 async function run() {
     setInterval(() => {
-        console.log('running every 10s')
         const log = require('node-live-log')('module-10')
-        log.warn('Test 10s', 'Arg1', 'Arg2')
+        log.debug('Debug Test 10s')
+        log.info('info Test 10s')
+        log.warn('Warn Test 10s', 'Arg1', { object: 'log-too'})
+        log.error('Erro Test 10s')
     }, 10 * 1000);
 
     setInterval(() => {
-        console.log('running every 15s')
         const log = require('node-live-log')('module-10')
         log.info('Test 15s')
     }, 15 * 1000);
