@@ -14,7 +14,13 @@ const logMethods = new Map([
 const consoleLevel = process.env.LOG_LEVEL ? logMethods.get(process.env.LOG_LEVEL.toLocaleLowerCase()) : logMethods.get('error')
 
 const httpServer = require("http").createServer()
-const io = require("socket.io")(httpServer)
+const io = require("socket.io")(httpServer, {
+  cors: {
+    origin: "*",
+    methods: ["GET", "POST"]
+  },
+  allowEIO3: true
+})
 const moment = require('moment')
 
 httpServer.listen(port, host)

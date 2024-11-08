@@ -11,9 +11,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "moment": "^2.30.1",
     "dotenv": "^16.4.4",
-    "socket.io": "2.5.0"
+    "moment": "^2.30.1",
+    "socket.io": "^4.8.1"
   },
   "keywords": [
     "node-live-log",
