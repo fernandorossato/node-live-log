@@ -2,7 +2,7 @@ require('dotenv').config({ path: ['.env'] })
 
 const port = process.env.LOG_PORT ? parseInt(process.env.LOG_PORT) : 3010
 const host = process.env.LOG_HOST || '127.0.0.1'
-const dateFomat = process.env.LOG_DATE_FORMAT || 'dd-MM-yyyy HH:mm:ss.SSS'
+const dateFomat = process.env.LOG_DATE_FORMAT || 'DD-MM-YYYY HH:mm:ss.SSS'
 
 const logMethods = new Map([
   ['error', 0],

@@ -1,6 +1,6 @@
 {
   "name": "node-live-log",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Module to generate logs in real time through socket.io",
   "main": "index.js",
   "repository": {
